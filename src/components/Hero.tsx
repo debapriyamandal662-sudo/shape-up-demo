@@ -16,7 +16,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#0c0d10]">
+    <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#0c0d10]">
       {/* Editorial Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -25,10 +25,10 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-40 scale-105 transition-transform duration-1000"
+          className="object-cover object-center opacity-45 scale-105 transition-transform duration-1000"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-[#0c0d10]/75 to-[#0c0d10]/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-[#0c0d10]/70 to-[#0c0d10]/50" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/15 via-transparent to-transparent pointer-events-none" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 w-full">
@@ -37,19 +37,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center space-x-2 glass-dark gold-border px-3.5 py-1.5 rounded-full mb-6"
+          className="inline-flex items-center space-x-2 glass-dark border border-[#d4af37]/40 shadow-lg px-4 py-1.5 rounded-full mb-6"
         >
           <div className="flex text-amber-400">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
             ))}
           </div>
-          <span className="text-[11px] sm:text-xs font-sans tracking-wide text-neutral-200">
+          <span className="text-[11px] sm:text-xs font-sans tracking-wide text-neutral-200 font-medium">
             4.9 Rated • Dunlop &amp; BT Road, Kolkata
           </span>
         </motion.div>
 
-        {/* Studio Name Headline (Clean Responsive Scaling) */}
+        {/* Studio Name Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-3xl mx-auto text-sm sm:text-lg md:text-xl font-sans text-neutral-300 font-light leading-relaxed mb-6 px-2"
+          className="max-w-3xl mx-auto text-sm sm:text-lg md:text-xl font-sans text-neutral-200 font-light leading-relaxed mb-6 px-2"
         >
           Kolkata&apos;s refined sanctuary at Dunlop Crossing. Specialist treatments for Hair Styling, Precision Beard Sculpting, Clinical Facials, Bengali Bridal HD Glamour &amp; Deluxe Gel Nail Artistry.
         </motion.p>
@@ -74,13 +74,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="inline-flex items-center space-x-2 text-[11px] sm:text-xs font-sans text-amber-200/90 mb-8 bg-amber-950/40 border border-amber-500/20 px-3.5 py-2 rounded-lg max-w-full"
+          className="inline-flex items-center space-x-2 text-[11px] sm:text-xs font-sans text-amber-200 mb-8 bg-amber-950/50 border border-amber-500/30 px-4 py-2 rounded-lg max-w-full shadow-md"
         >
           <MapPin className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
           <span className="truncate">{salonConfig.address}, Kolkata – {salonConfig.pincode}</span>
         </motion.div>
 
-        {/* CTA Buttons (Vertical Stack on Mobile, Min-Height 48px) */}
+        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ export default function Hero() {
           </a>
           <a
             href="#services"
-            className="w-full sm:w-auto glass-dark gold-border text-white font-sans font-semibold text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 min-h-[48px] rounded-full gold-border-hover transition-all transform hover:-translate-y-0.5 flex items-center justify-center active:scale-95"
+            className="w-full sm:w-auto glass-dark border border-[#d4af37]/30 hover:border-[#d4af37] text-white font-sans font-semibold text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 min-h-[48px] rounded-full transition-all transform hover:-translate-y-0.5 flex items-center justify-center active:scale-95"
           >
             Explore Services &amp; Rates
           </a>
@@ -116,10 +116,10 @@ export default function Hero() {
             return (
               <div
                 key={idx}
-                className="glass-dark border border-white/5 hover:border-[#d4af37]/40 rounded-xl p-3 text-center transition-all duration-300 group"
+                className="glass-dark border border-white/10 hover:border-[#d4af37]/50 rounded-xl p-3 text-center transition-all duration-300 group"
               >
                 <Icon className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1.5 text-[#d4af37] group-hover:scale-110 transition-transform" />
-                <span className="text-[11px] sm:text-xs font-sans font-medium text-neutral-300 group-hover:text-white transition-colors block truncate">
+                <span className="text-[11px] sm:text-xs font-sans font-medium text-neutral-200 group-hover:text-white transition-colors block truncate">
                   {cat.label}
                 </span>
               </div>

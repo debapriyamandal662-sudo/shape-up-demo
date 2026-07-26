@@ -25,7 +25,7 @@ export default function ServicesPricing() {
       : salonConfig.services.filter((s) => s.category === activeTab);
 
   return (
-    <section id="services" className="py-20 sm:py-24 bg-[#0c0d10] relative overflow-hidden">
+    <section id="services" className="py-20 sm:py-28 bg-[#0c0d10] relative overflow-hidden">
       {/* Background Accent Subtle Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-amber-600/5 blur-[140px] pointer-events-none rounded-full" />
 
@@ -46,9 +46,8 @@ export default function ServicesPricing() {
           </span>
         </div>
 
-        {/* Horizontally Scrollable Category Pill Row on Mobile with Scroll Affordance */}
+        {/* Horizontally Scrollable Category Pill Row on Mobile with Fade Edge */}
         <div className="relative mb-10 -mx-4 px-4 sm:mx-0 sm:px-0">
-          {/* Scroll Fade Indicator Edge */}
           <div className="md:hidden absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#0c0d10] to-transparent z-10 pointer-events-none" />
 
           <div className="flex items-center space-x-2 overflow-x-auto scrollbar-none py-2 px-1 scroll-smooth snap-x md:justify-center md:flex-wrap md:overflow-visible">
@@ -88,15 +87,15 @@ export default function ServicesPricing() {
               >
                 {/* Popular Badge */}
                 {service.popular && (
-                  <div className="absolute top-4 right-4 z-10 bg-amber-400/10 border border-amber-400/40 text-amber-300 text-[10px] uppercase font-sans tracking-widest px-2.5 py-0.5 rounded-full font-bold backdrop-blur-md">
+                  <div className="absolute top-4 right-4 z-10 bg-amber-400/10 border border-amber-400/40 text-amber-300 text-[10px] uppercase font-sans tracking-widest px-2.5 py-1 rounded-full font-bold backdrop-blur-md">
                     Client Favorite
                   </div>
                 )}
 
                 <div>
-                  {/* Thumbnail Image Header (Lazy loaded below the fold) */}
+                  {/* Aspect Ratio 16:9 Photography Header */}
                   {service.image && (
-                    <div className="relative w-full h-36 rounded-xl overflow-hidden mb-4 border border-white/10">
+                    <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-4 border border-white/10 shadow-md">
                       <Image
                         src={service.image}
                         alt={service.name}
@@ -130,7 +129,7 @@ export default function ServicesPricing() {
                   </p>
                 </div>
 
-                {/* Price & Book Action (Min-height 44px Tappable Button) */}
+                {/* Price & Book Action */}
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between mt-auto">
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase block font-sans">Price</span>
