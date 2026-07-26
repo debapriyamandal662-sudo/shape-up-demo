@@ -6,7 +6,7 @@ import { salonConfig } from "@/config/salonConfig";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#08090b] text-neutral-400 border-t border-white/10 pt-16 pb-24 md:pb-12 font-sans">
+    <footer className="bg-[#08090b] text-neutral-400 border-t border-white/10 pt-16 pb-32 md:pb-12 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           
@@ -32,19 +32,19 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition-colors">Hair Cut, Color &amp; Keratin</a>
+                <a href="#services" className="hover:text-[#d4af37] transition-colors py-1 block">Hair Cut, Color &amp; Keratin</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition-colors">Beard Sculpting &amp; Steam Shave</a>
+                <a href="#services" className="hover:text-[#d4af37] transition-colors py-1 block">Beard Sculpting &amp; Steam Shave</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition-colors">O3+ &amp; Hydra Skincare Facials</a>
+                <a href="#services" className="hover:text-[#d4af37] transition-colors py-1 block">O3+ &amp; Hydra Skincare Facials</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition-colors">Bengali Royal HD Bridal Makeup</a>
+                <a href="#services" className="hover:text-[#d4af37] transition-colors py-1 block">Bengali Royal HD Bridal Makeup</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition-colors">Luxury Gel Nail Extensions &amp; Art</a>
+                <a href="#services" className="hover:text-[#d4af37] transition-colors py-1 block">Luxury Gel Nail Extensions &amp; Art</a>
               </li>
             </ul>
           </div>
@@ -56,19 +56,19 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition-colors">Service Catalog &amp; Rates</a>
+                <a href="#services" className="hover:text-[#d4af37] transition-colors py-1 block">Service Catalog &amp; Rates</a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-[#d4af37] transition-colors">Transformations Lookbook</a>
+                <a href="#gallery" className="hover:text-[#d4af37] transition-colors py-1 block">Transformations Lookbook</a>
               </li>
               <li>
-                <a href="#why-us" className="hover:text-[#d4af37] transition-colors">Hygiene &amp; Brand Partners</a>
+                <a href="#why-us" className="hover:text-[#d4af37] transition-colors py-1 block">Hygiene &amp; Brand Partners</a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-[#d4af37] transition-colors">Client Reviews</a>
+                <a href="#testimonials" className="hover:text-[#d4af37] transition-colors py-1 block">Client Reviews</a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#d4af37] transition-colors">Map &amp; Studio Hours</a>
+                <a href="#contact" className="hover:text-[#d4af37] transition-colors py-1 block">Map &amp; Studio Hours</a>
               </li>
             </ul>
           </div>
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Copyright */}
+        {/* Bottom Copyright (Protected from Mobile Sticky CTA Bar) */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-light">
           <p>© {new Date().getFullYear()} {salonConfig.name}. All rights reserved.</p>
           <p className="mt-2 sm:mt-0 text-[11px]">

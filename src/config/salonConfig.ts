@@ -30,9 +30,9 @@ export interface SalonConfig {
     logoText: string;
   }[];
   integrations: {
-    googlePlaceId: string; // Leave empty to test graceful fallback
-    instagramHandle: string; // Set empty to toggle off
-    youtubeChannelId: string; // Set empty to toggle off
+    googlePlaceId: string;
+    instagramHandle: string;
+    youtubeChannelId: string;
     enableGoogleReviewsWidget: boolean;
     enableInstagramFeed: boolean;
     enableYouTubeFeed: boolean;
@@ -57,7 +57,7 @@ export const salonConfig: SalonConfig = {
     { days: "Sunday", hours: "10:00 AM - 9:00 PM" },
   ],
 
-  // ONLY verified brands from client's existing site: L'Oréal, Wella Professionals, Rica, Blossom Kochhar Aroma Magic
+  // Verified Brand Partners (Strictly text labels as per specification)
   brandPartners: [
     { name: "L'Oréal", tagline: "Professional Paris Haircare", logoText: "L'ORÉAL" },
     { name: "Wella Professionals", tagline: "German Precision Hair Color", logoText: "WELLA" },
@@ -66,7 +66,7 @@ export const salonConfig: SalonConfig = {
   ],
 
   integrations: {
-    googlePlaceId: "", // Empty to demonstrate graceful fallback
+    googlePlaceId: "",
     instagramHandle: "shapeupsalon_kolkata",
     youtubeChannelId: "",
     enableGoogleReviewsWidget: true,
@@ -75,7 +75,7 @@ export const salonConfig: SalonConfig = {
   },
 
   services: [
-    // HAIR SERVICES
+    // HAIR SERVICES (reusing /images/gallery/hair-1.jpg & hair-2.jpg)
     {
       id: "hair-cut-style",
       category: "hair",
@@ -84,6 +84,7 @@ export const salonConfig: SalonConfig = {
       price: "₹499",
       duration: "45 mins",
       popular: true,
+      image: "/images/gallery/hair-1.jpg",
     },
     {
       id: "hair-color-global",
@@ -93,6 +94,7 @@ export const salonConfig: SalonConfig = {
       price: "₹2,499",
       duration: "120 mins",
       popular: true,
+      image: "/images/gallery/hair-2.jpg",
     },
     {
       id: "keratin-treatment",
@@ -101,6 +103,7 @@ export const salonConfig: SalonConfig = {
       description: "Frizz-eliminating structural keratin rebuilding for silky, high-shine manageable hair.",
       price: "₹3,999",
       duration: "150 mins",
+      image: "/images/gallery/hair-1.jpg",
     },
     {
       id: "scalp-spa",
@@ -109,9 +112,10 @@ export const salonConfig: SalonConfig = {
       description: "Deep steam nourishment with essential oils to arrest hair fall and stimulate roots.",
       price: "₹899",
       duration: "60 mins",
+      image: "/images/gallery/hair-2.jpg",
     },
 
-    // BEARD & GROOMING
+    // BEARD & GROOMING (reusing /images/gallery/beard-1.jpg)
     {
       id: "beard-shape-style",
       category: "beard",
@@ -120,6 +124,7 @@ export const salonConfig: SalonConfig = {
       price: "₹299",
       duration: "30 mins",
       popular: true,
+      image: "/images/gallery/beard-1.jpg",
     },
     {
       id: "royal-hot-towel",
@@ -128,6 +133,7 @@ export const salonConfig: SalonConfig = {
       description: "Traditional hot steam towel softened shave followed by cooling aftershave balm.",
       price: "₹450",
       duration: "40 mins",
+      image: "/images/gallery/beard-1.jpg",
     },
     {
       id: "beard-spa-color",
@@ -136,9 +142,10 @@ export const salonConfig: SalonConfig = {
       description: "Natural gray coverage coupled with deep hydrating beard butter treatment.",
       price: "₹650",
       duration: "45 mins",
+      image: "/images/gallery/beard-1.jpg",
     },
 
-    // SKINCARE & FACIALS
+    // SKINCARE & FACIALS (reusing /images/gallery/skincare-1.jpg)
     {
       id: "o3-radiance-facial",
       category: "skincare",
@@ -147,6 +154,7 @@ export const salonConfig: SalonConfig = {
       price: "₹1,899",
       duration: "75 mins",
       popular: true,
+      image: "/images/gallery/skincare-1.jpg",
     },
     {
       id: "hydra-glow-facial",
@@ -156,6 +164,7 @@ export const salonConfig: SalonConfig = {
       price: "₹2,499",
       duration: "90 mins",
       popular: true,
+      image: "/images/gallery/skincare-1.jpg",
     },
     {
       id: "charcoal-detox",
@@ -164,6 +173,7 @@ export const salonConfig: SalonConfig = {
       description: "Pure aromatherapy botanical formulation to clarify pores and balance oil skin.",
       price: "₹1,299",
       duration: "60 mins",
+      image: "/images/gallery/skincare-1.jpg",
     },
     {
       id: "rica-body-polish",
@@ -172,9 +182,10 @@ export const salonConfig: SalonConfig = {
       description: "Full body velvet smoothing peel enriched with avocado butter for silky texture.",
       price: "₹2,199",
       duration: "80 mins",
+      image: "/images/gallery/skincare-1.jpg",
     },
 
-    // BRIDAL & PARTY MAKEUP
+    // BRIDAL & PARTY MAKEUP (reusing /images/gallery/bridal-1.jpg)
     {
       id: "bengali-bridal-hd",
       category: "bridal",
@@ -183,6 +194,7 @@ export const salonConfig: SalonConfig = {
       price: "₹12,500",
       duration: "240 mins",
       popular: true,
+      image: "/images/gallery/bridal-1.jpg",
     },
     {
       id: "airbrush-bridal",
@@ -192,6 +204,7 @@ export const salonConfig: SalonConfig = {
       price: "₹16,999",
       duration: "270 mins",
       popular: true,
+      image: "/images/gallery/bridal-1.jpg",
     },
     {
       id: "party-glam-makeup",
@@ -200,9 +213,10 @@ export const salonConfig: SalonConfig = {
       description: "Elegant party makeup look with soft smoky eye, sculpted contouring, and lash installation.",
       price: "₹3,499",
       duration: "90 mins",
+      image: "/images/gallery/bridal-1.jpg",
     },
 
-    // NAIL ARTISTRY
+    // NAIL ARTISTRY (reusing /images/gallery/nails-1.jpg)
     {
       id: "gel-nail-extensions",
       category: "nails",
@@ -211,6 +225,7 @@ export const salonConfig: SalonConfig = {
       price: "₹1,799",
       duration: "90 mins",
       popular: true,
+      image: "/images/gallery/nails-1.jpg",
     },
     {
       id: "french-manicure-spa",
@@ -219,6 +234,7 @@ export const salonConfig: SalonConfig = {
       description: "Exfoliating hand soak, cuticle care, relaxing hand massage, and long-wear gel polish.",
       price: "₹799",
       duration: "45 mins",
+      image: "/images/gallery/nails-1.jpg",
     },
     {
       id: "deluxe-spa-pedicure",
@@ -228,6 +244,7 @@ export const salonConfig: SalonConfig = {
       price: "₹999",
       duration: "60 mins",
       popular: true,
+      image: "/images/gallery/nails-1.jpg",
     },
   ],
 };
