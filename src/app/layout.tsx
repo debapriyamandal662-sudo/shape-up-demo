@@ -17,7 +17,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: `${salonConfig.name} | Premium Hair, Beauty, Skincare & Bridal Studio Kolkata`,
-  description: `${salonConfig.name} at 43 BT Road, Kolkata 700050. Dunlop's top luxury salon offering Hair cut & styling, Beard sculpting, O3+ Facials, Bengali HD Bridal Makeup & Gel Nail Artistry. Call +91 6292021352.`,
+  description: `${salonConfig.name} at 43 BT Road, Kolkata 700050. Dunlop's luxury studio offering Hair cut & styling, Beard sculpting, O3+ Facials, Bengali HD Bridal Makeup & Gel Nail Artistry. Call +91 6292021352.`,
   keywords: [
     "Shape-Up Hair & Beauty Studio",
     "Salon Dunlop Kolkata",
@@ -37,12 +37,18 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero.jpg",
+        url: "/images/hero-bg.jpg",
         width: 1200,
         height: 630,
-        alt: `${salonConfig.name} Interior`,
+        alt: `${salonConfig.name} Luxury Interior`,
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${salonConfig.name} - Luxury Hair & Beauty Studio Kolkata`,
+    description: "Premium hair, beard, skincare, Bengali HD bridal makeup & gel nail artistry at 43 BT Road, Dunlop Crossing, Kolkata.",
+    images: ["/images/hero-bg.jpg"],
   },
   robots: {
     index: true,

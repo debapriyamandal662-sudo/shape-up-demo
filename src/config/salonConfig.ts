@@ -57,7 +57,7 @@ export const salonConfig: SalonConfig = {
     { days: "Sunday", hours: "10:00 AM - 9:00 PM" },
   ],
 
-  // Verified Brand Partners (Strictly text labels as per specification)
+  // Verified Brand Partners (Strictly text labels)
   brandPartners: [
     { name: "L'Oréal", tagline: "Professional Paris Haircare", logoText: "L'ORÉAL" },
     { name: "Wella Professionals", tagline: "German Precision Hair Color", logoText: "WELLA" },
@@ -66,16 +66,16 @@ export const salonConfig: SalonConfig = {
   ],
 
   integrations: {
-    googlePlaceId: "",
-    instagramHandle: "shapeupsalon_kolkata",
-    youtubeChannelId: "",
+    googlePlaceId: "", // Leave empty until client provides Google Place ID
+    instagramHandle: "", // Leave empty until client confirms official Instagram handle
+    youtubeChannelId: "", // Leave empty until client confirms YouTube channel
     enableGoogleReviewsWidget: true,
-    enableInstagramFeed: true,
+    enableInstagramFeed: false,
     enableYouTubeFeed: false,
   },
 
   services: [
-    // HAIR SERVICES (reusing /images/gallery/hair-1.jpg & hair-2.jpg)
+    // HAIR SERVICES
     {
       id: "hair-cut-style",
       category: "hair",
@@ -115,7 +115,7 @@ export const salonConfig: SalonConfig = {
       image: "/images/gallery/hair-2.jpg",
     },
 
-    // BEARD & GROOMING (reusing /images/gallery/beard-1.jpg)
+    // BEARD & GROOMING
     {
       id: "beard-shape-style",
       category: "beard",
@@ -145,7 +145,7 @@ export const salonConfig: SalonConfig = {
       image: "/images/gallery/beard-1.jpg",
     },
 
-    // SKINCARE & FACIALS (reusing /images/gallery/skincare-1.jpg)
+    // SKINCARE & FACIALS
     {
       id: "o3-radiance-facial",
       category: "skincare",
@@ -185,7 +185,7 @@ export const salonConfig: SalonConfig = {
       image: "/images/gallery/skincare-1.jpg",
     },
 
-    // BRIDAL & PARTY MAKEUP (reusing /images/gallery/bridal-1.jpg)
+    // BRIDAL & PARTY MAKEUP
     {
       id: "bengali-bridal-hd",
       category: "bridal",
@@ -216,7 +216,7 @@ export const salonConfig: SalonConfig = {
       image: "/images/gallery/bridal-1.jpg",
     },
 
-    // NAIL ARTISTRY (reusing /images/gallery/nails-1.jpg)
+    // NAIL ARTISTRY
     {
       id: "gel-nail-extensions",
       category: "nails",

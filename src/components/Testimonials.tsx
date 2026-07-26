@@ -1,97 +1,63 @@
 "use client";
 
-import { Star, Quote, CheckCircle2 } from "lucide-react";
+import { Quote, Info } from "lucide-react";
 
 export default function Testimonials() {
-  const reviews = [
+  const samplePlaceholders = [
     {
-      name: "Priyanka Roy",
-      locality: "Sinthee, Kolkata",
-      service: "Bengali Bridal HD Makeup",
-      rating: 5,
+      title: "Sample Client Testimonial 1",
+      category: "Hair & Styling Service",
       quote:
-        "Swapna and her bridal team made my wedding day unforgettable! The Bengali HD bridal makeup stayed completely flawless for 14 hours. Saree draping and hair setting were top notch.",
+        "Sample client review placeholder text. Real customer feedback and quotes will beFinalized and added here prior to live deployment.",
     },
     {
-      name: "Anirban Mukherjee",
-      locality: "Dunlop, Kolkata",
-      service: "Beard Sculpting & Hair Cut",
-      rating: 5,
+      title: "Sample Client Testimonial 2",
+      category: "Bridal Makeup Package",
       quote:
-        "Finally a luxury studio on BT Road that understands precision beard shaping and modern hair cuts. Cleanest salon in northern Kolkata. Extremely professional staff.",
-    },
-    {
-      name: "Sreyashi Das",
-      locality: "Baranagar, Kolkata",
-      service: "O3+ Facial & Gel Nail Art",
-      rating: 5,
-      quote:
-        "The O3+ brightening facial gave my skin an instant glass glow before my anniversary party. Also got gel nail extensions done — 3 weeks later they still look pristine!",
-    },
-    {
-      name: "Debolina Sen",
-      locality: "Cossipore, Kolkata",
-      service: "Keratin Smooth Therapy",
-      rating: 5,
-      quote:
-        "Transformed my dry frizzy hair into silky soft locks using genuine L'Oréal formulas. Very transparent pricing with no pushy upselling.",
+        "Sample client review placeholder text. Real customer feedback and quotes will be finalized and added here prior to live deployment.",
     },
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-[#0c0d10] text-white relative">
+    <section id="testimonials" className="py-20 sm:py-24 bg-[#0c0d10] text-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-xs uppercase tracking-[0.25em] text-[#d4af37] font-semibold">
-            Client Words
+            Client Feedback Slot
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-bold mt-2 mb-4">
-            Loved By Kolkata&apos;s Discerning Clients
+            Client Words &amp; Reviews
           </h2>
-          <p className="text-neutral-400 font-sans font-light text-base sm:text-lg">
-            Read real experiences from long-time residents of Dunlop, Sinthee, and northern Kolkata who trust us with their everyday &amp; milestone beauty.
+          <p className="text-neutral-400 font-sans font-light text-sm sm:text-base leading-relaxed">
+            This section is structurally prepared for authentic client reviews and testimonials to be added upon final client content sign-off.
           </p>
         </div>
 
-        {/* 4 Testimonial Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {reviews.map((rev, index) => (
+        {/* 2 Clearly-Labeled Placeholder Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {samplePlaceholders.map((item, index) => (
             <div
               key={index}
-              className="glass-dark gold-border rounded-2xl p-8 relative flex flex-col justify-between gold-border-hover transition-all duration-300 hover:-translate-y-1"
+              className="glass-dark border border-white/10 rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between"
             >
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-[#d4af37]/15 pointer-events-none" />
+              <Quote className="absolute top-6 right-6 w-8 h-8 text-[#d4af37]/20 pointer-events-none" />
 
               <div>
-                {/* Rating & Service */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex text-amber-400">
-                    {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-sans font-medium text-[#c5a880] bg-[#d4af37]/10 px-3 py-1 rounded-full border border-[#d4af37]/20">
-                    {rev.service}
-                  </span>
+                <div className="inline-flex items-center space-x-1.5 text-[11px] font-sans font-medium text-amber-300/80 bg-amber-950/40 px-3 py-1 rounded-full border border-amber-500/20 mb-4">
+                  <Info className="w-3.5 h-3.5" />
+                  <span>[Sample Placeholder — Editable]</span>
                 </div>
 
-                {/* Quote */}
-                <p className="text-neutral-300 font-sans font-light text-base leading-relaxed mb-6 italic">
-                  &ldquo;{rev.quote}&rdquo;
+                <h4 className="font-serif font-bold text-white text-lg mb-2">{item.title}</h4>
+                <p className="text-neutral-400 font-sans font-light text-xs sm:text-sm leading-relaxed mb-6 italic">
+                  &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
 
-              {/* Client Info */}
-              <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                <div>
-                  <h4 className="font-serif font-bold text-white text-lg">{rev.name}</h4>
-                  <span className="text-xs text-neutral-400 font-sans block">{rev.locality}</span>
-                </div>
-                <div className="flex items-center space-x-1 text-emerald-400 text-xs font-sans">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Verified Visit</span>
-                </div>
+              <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-neutral-500 font-mono">
+                <span>Category: {item.category}</span>
+                <span>Ready for Launch Content</span>
               </div>
             </div>
           ))}

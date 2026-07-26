@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Sparkles, MapPin, Phone, Mail } from "lucide-react";
 import { salonConfig } from "@/config/salonConfig";
+import AgencyCredit from "@/components/AgencyCredit";
 
 export default function Footer() {
   return (
@@ -95,12 +96,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Copyright (Protected from Mobile Sticky CTA Bar) */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-light">
+        {/* Bottom Copyright & Viberage Agency Credit */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-light gap-2">
           <p>© {new Date().getFullYear()} {salonConfig.name}. All rights reserved.</p>
-          <p className="mt-2 sm:mt-0 text-[11px]">
-            Designed &amp; Built as a Premium ₹50,000+ Demo Web Architecture
-          </p>
+          <AgencyCredit />
         </div>
       </div>
     </footer>
